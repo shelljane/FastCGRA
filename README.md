@@ -44,9 +44,11 @@
 
 >* export BENCH=mac
 
->* GH placer: python3 ./place_vanilla_multiprocess.py ./benchmarks/${BENCH}/pre-gen-graph_loop_DFG.txt ./benchmarks/${BENCH}/pre-gen-graph_loop_compat.txt 32
+>* GH placer: python3 ./place_vanilla_multiprocess.py ./benchmarks/\$\{BENCH\}/pre-gen-graph_loop_DFG.txt ./benchmarks/\$\{BENCH\}/pre-gen-graph_loop_compat.txt 32
 
->* SA placer: python3 ./place_vanilla_annealing_multiprocess.py ./benchmarks/${BENCH}/pre-gen-graph_loop_DFG.txt ./benchmarks/${BENCH}/pre-gen-graph_loop_compat.txt 32
+>* SA placer: python3 ./place_vanilla_annealing_multiprocess.py ./benchmarks/\$\{BENCH\}/pre-gen-graph_loop_DFG.txt ./benchmarks/\$\{BENCH\}/pre-gen-graph_loop_compat.txt 32
+
+>* The user can also run './place_vanilla ./benchmarks/\$\{BENCH\}/pre-gen-graph_loop_DFG.txt ./benchmarks/\$\{BENCH\}/pre-gen-graph_loop_compat.txt' to view the details of the placement procedure. 
 
 >* The BENCH can be selected from: mac, nomem1, simple, simple2, sum
 
@@ -60,7 +62,7 @@
 
 >* export BENCH=point_mul
 
->* python3 ./placeraw_multiprocess.py ./archs/${ARCH}RRG.txt ./archs/${ARCH}FUs.txt ./benchmarks/${ARCH}/${BENCH}_DFG.txt ./benchmarks/${ARCH}/${BENCH}_compat.txt 32
+>* python3 ./placeraw_multiprocess.py ./archs/\$\{ARCH\}RRG.txt ./archs/\$\{ARCH}FUs.txt ./benchmarks/\$\{ARCH\}/\$\{BENCH\}_DFG.txt ./benchmarks/\$\{ARCH\}/\$\{BENCH\}_compat.txt 32
 
 >* The user can change the architecture by modifying ARCH, and use different benchmark by changing BENCH. 
 
@@ -68,6 +70,6 @@
 
 >* The BENCH can be selected from: point_add, point_mul, greater, vecmul, conv2, conv3, linear, decision_tree
 
->* The user can also run './placeraw ./archs/${ARCH}RRG.txt ./archs/${ARCH}FUs.txt ./benchmarks/${ARCH}/${BENCH}_DFG.txt ./benchmarks/${ARCH}/${BENCH}_compat.txt' to view the details of the placement procedure. 
+>* The user can also run './placeraw ./archs/\$\{ARCH\}RRG.txt ./archs/\$\{ARCH\}FUs.txt ./benchmarks/\$\{ARCH\}/\$\{BENCH\}_DFG.txt ./benchmarks/\$\{ARCH\}/\$\{BENCH\}_compat.txt' to view the details of the placement procedure. 
 
 >* The executable is compiled with the '-Ofast' option, which may limit its compatibility. We offer an executable in the ./backup/ directory which is compiled with '-O2'. The user can try it if the default executable cannot work. 
