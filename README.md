@@ -4,7 +4,7 @@
 
 ## Experimental Settings
 
->* Interl Xeon E5-2620 v4 * 2
+>* Intel Xeon E5-2620 v4 * 2
 
 >* Ubuntu 18.04, kenerl 5.4.0
 
